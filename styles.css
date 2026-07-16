@@ -1,0 +1,302 @@
+.ticket-container > .teoria-helper-actions {
+  box-sizing: border-box;
+  position: absolute;
+  top: 15px;
+  right: 73px;
+  left: auto;
+  z-index: 22;
+  display: flex;
+  align-items: stretch;
+  gap: 6px;
+  height: 47px;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+}
+
+.ticket-container:hover > .teoria-helper-actions,
+.ticket-container > .teoria-helper-actions:has(> button:focus-visible) {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.ticket-container > .teoria-helper-actions > button {
+  appearance: none;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 47px;
+  margin: 0;
+  padding: 0 10px;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+  font: 700 11px/1 Arial, "Helvetica Neue", Helvetica, sans-serif;
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+
+.ticket-container.teoria-helper-supported > .teoria-helper-actions > .teoria-helper-answer-button {
+  background: #14823b;
+}
+
+.ticket-container.teoria-helper-unsupported > .teoria-helper-actions > .teoria-helper-answer-button {
+  background: #6d7470;
+}
+
+.ticket-container > .teoria-helper-actions > .teoria-helper-error-button {
+  background: #b3261e;
+}
+
+.ticket-container > .teoria-helper-actions > button:hover,
+.ticket-container > .teoria-helper-actions > button:focus-visible {
+  filter: brightness(1.12);
+  outline: 2px solid #fff;
+  outline-offset: 1px;
+}
+
+.ticket-container .t-question.teoria-helper-question-trigger {
+  cursor: pointer !important;
+  transition: background-color 140ms ease, box-shadow 140ms ease;
+}
+
+.ticket-container .t-question.teoria-helper-question-trigger:hover,
+.ticket-container .t-question.teoria-helper-question-trigger:focus-visible {
+  outline: none;
+  background: rgba(20, 130, 59, 0.22);
+  box-shadow: inset 0 0 0 2px rgba(98, 225, 139, 0.9);
+}
+
+.ticket-container[data-teoria-russian-text="true"] .t-question,
+.ticket-container[data-teoria-russian-text="true"] .t-answer {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif !important;
+}
+
+html.teoria-helper-modal-open {
+  overflow: hidden !important;
+}
+
+.teoria-helper-modal-layer,
+.teoria-helper-modal-layer * {
+  box-sizing: border-box;
+}
+
+.teoria-helper-modal-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483646;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(5, 18, 12, 0.68);
+  backdrop-filter: blur(3px);
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.teoria-helper-modal-layer[hidden],
+.teoria-helper-modal [hidden] {
+  display: none !important;
+}
+
+.teoria-helper-modal {
+  width: min(640px, 100%);
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  color: #26342b;
+  background: #fff;
+  border: 1px solid #b7d8bf;
+  border-radius: 14px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.38);
+  animation: teoria-helper-modal-in 150ms ease-out;
+}
+
+.teoria-helper-modal__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 22px 16px;
+  border-bottom: 1px solid #e1ece4;
+}
+
+.teoria-helper-modal__label {
+  display: block;
+  color: #4c7357;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.teoria-helper-modal__title {
+  margin: 0;
+  color: #123f22;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.teoria-helper-modal__close {
+  flex: 0 0 auto;
+  width: 36px;
+  height: 36px;
+  margin: -4px -5px 0 0;
+  padding: 0;
+  color: #47614f;
+  background: #eef5f0;
+  border: 0;
+  border-radius: 50%;
+  font: 400 28px/34px Arial, sans-serif;
+  text-align: center;
+  cursor: pointer;
+}
+
+.teoria-helper-modal__close:hover,
+.teoria-helper-modal__close:focus-visible {
+  color: #fff;
+  background: #14823b;
+  outline: none;
+}
+
+.teoria-helper-modal__important-note,
+.teoria-helper-modal__answer-block,
+.teoria-helper-modal__explanation-block,
+.teoria-helper-modal__unavailable {
+  margin: 18px 22px;
+  padding: 16px 18px;
+  border-radius: 9px;
+}
+
+.teoria-helper-modal__important-note {
+  background: #fff2e8;
+  border: 1px solid #efb28b;
+  border-left: 5px solid #d94b20;
+}
+
+.teoria-helper-modal__important-note-label {
+  color: #a93618;
+}
+
+.teoria-helper-modal__important-note-text {
+  margin: 7px 0 0;
+  color: #642510;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.teoria-helper-modal__answer-block {
+  background: #edf8f0;
+  border: 1px solid #acd5b7;
+  border-left: 5px solid #14823b;
+}
+
+.teoria-helper-modal__answer {
+  display: block;
+  margin-top: 7px;
+  color: #0b6b2d;
+  font-size: 17px;
+  line-height: 1.4;
+}
+
+.teoria-helper-modal__explanation-block {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 12px;
+  margin-top: 0;
+  background: #f6f8f6;
+  border: 1px solid #d9e4dc;
+}
+
+.teoria-helper-modal__explanation-block--en {
+  background: #f5f8fb;
+  border-color: #d7e2ec;
+}
+
+.teoria-helper-modal__language {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 26px;
+  color: #fff;
+  background: #14823b;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.teoria-helper-modal__explanation-block--en .teoria-helper-modal__language {
+  background: #306ea3;
+}
+
+.teoria-helper-modal__explanation {
+  margin: 7px 0 0;
+  color: #29362e;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.teoria-helper-modal__unavailable {
+  background: #f7f7f7;
+  border: 1px solid #d9dcda;
+  border-left: 5px solid #767d79;
+}
+
+.teoria-helper-modal__unavailable p {
+  margin: 0;
+  color: #37413b;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+@keyframes teoria-helper-modal-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 600px) {
+  .teoria-helper-modal-layer {
+    align-items: flex-end;
+    padding: 10px;
+  }
+
+  .teoria-helper-modal {
+    width: 100%;
+    max-height: calc(100vh - 20px);
+    border-radius: 14px 14px 8px 8px;
+  }
+
+  .teoria-helper-modal__header,
+  .teoria-helper-modal__important-note {
+    padding-right: 17px;
+    padding-left: 17px;
+  }
+
+  .teoria-helper-modal__important-note,
+  .teoria-helper-modal__answer-block,
+  .teoria-helper-modal__explanation-block,
+  .teoria-helper-modal__unavailable {
+    margin-right: 17px;
+    margin-left: 17px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .teoria-helper-modal {
+    animation: none;
+  }
+}
