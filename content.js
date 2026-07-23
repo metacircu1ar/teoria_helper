@@ -2,6 +2,7 @@
   "use strict";
 
   const TICKETS = globalThis.TEORIA_TICKET_DATA || {};
+  const CHEAT_SHEETS = globalThis.TEORIA_CHEAT_SHEETS || {};
   const MODAL_ID = "teoria-helper-modal-layer";
   const EXAM_SHORTCUT_KEYS = new Set(["Escape", "Enter", " ", "1", "2", "3", "4"]);
   let previousFocus = null;
@@ -60,6 +61,36 @@
   function localizedRecord(table, language) {
     const value = table?.[language];
     return value && typeof value === "object" && !Array.isArray(value) ? value : {};
+  }
+
+  function renderCheatSheets(container, cheatSheetIds, language) {
+    container.replaceChildren();
+    const ids = Array.isArray(cheatSheetIds) ? cheatSheetIds : [];
+
+    for (const id of ids) {
+      const cheatSheet = CHEAT_SHEETS[id];
+      const label = localizedText(cheatSheet?.label, language);
+      const text = localizedText(cheatSheet?.text, language);
+      if (!label || !text) continue;
+
+      const block = document.createElement("section");
+      block.className = "teoria-helper-modal__cheat-sheet";
+      block.setAttribute("role", "note");
+      block.lang = language;
+
+      const heading = document.createElement("strong");
+      heading.className = "teoria-helper-modal__cheat-sheet-label";
+      heading.textContent = label;
+
+      const body = document.createElement("p");
+      body.className = "teoria-helper-modal__cheat-sheet-text";
+      body.textContent = text;
+
+      block.append(heading, body);
+      container.append(block);
+    }
+
+    container.hidden = container.childElementCount === 0;
   }
 
   function normalizeAnswerIdentity(value) {
@@ -218,6 +249,7 @@
             <div>
               <span class="teoria-helper-modal__label teoria-helper-modal__explanation-label--ru"></span>
               <p id="teoria-helper-modal-description-ru" class="teoria-helper-modal__explanation teoria-helper-modal__explanation--ru"></p>
+              <div id="teoria-helper-modal-cheat-sheets-ru" class="teoria-helper-modal__cheat-sheets teoria-helper-modal__cheat-sheets--ru" hidden></div>
             </div>
           </section>
           <section class="teoria-helper-modal__explanation-block teoria-helper-modal__explanation-block--en" lang="en">
@@ -225,6 +257,7 @@
             <div>
               <span class="teoria-helper-modal__label teoria-helper-modal__explanation-label--en"></span>
               <p id="teoria-helper-modal-description-en" class="teoria-helper-modal__explanation teoria-helper-modal__explanation--en"></p>
+              <div id="teoria-helper-modal-cheat-sheets-en" class="teoria-helper-modal__cheat-sheets teoria-helper-modal__cheat-sheets--en" hidden></div>
             </div>
           </section>
         </div>
@@ -285,6 +318,8 @@
     const answer = layer.querySelector(".teoria-helper-modal__answer");
     const russianExplanation = layer.querySelector(".teoria-helper-modal__explanation--ru");
     const englishExplanation = layer.querySelector(".teoria-helper-modal__explanation--en");
+    const russianCheatSheets = layer.querySelector(".teoria-helper-modal__cheat-sheets--ru");
+    const englishCheatSheets = layer.querySelector(".teoria-helper-modal__cheat-sheets--en");
     const importantNote = localizedText(solution?.importantNote, siteLanguage);
     const displayedAnswerNumber = getDisplayedCorrectAnswerNumber(ticket, solution);
 
@@ -300,6 +335,8 @@
     answer.textContent = "";
     russianExplanation.textContent = "";
     englishExplanation.textContent = "";
+    renderCheatSheets(russianCheatSheets, [], "ru");
+    renderCheatSheets(englishCheatSheets, [], "en");
 
     if (isCorrectionOnly && importantNote) {
       importantNoteBlock.hidden = false;
@@ -316,12 +353,16 @@
         : displayedAnswerNumber;
       russianExplanation.textContent = isRussian ? localizedText(solution.explanation, "ru") : "";
       englishExplanation.textContent = localizedText(solution.explanation, "en");
+      renderCheatSheets(russianCheatSheets, isRussian ? solution.cheatSheets : [], "ru");
+      renderCheatSheets(englishCheatSheets, solution.cheatSheets, "en");
       dialog.setAttribute(
         "aria-describedby",
         [
           importantNote ? "teoria-helper-modal-important-note-text" : "",
           isRussian ? "teoria-helper-modal-description-ru" : "",
-          "teoria-helper-modal-description-en"
+          isRussian && !russianCheatSheets.hidden ? "teoria-helper-modal-cheat-sheets-ru" : "",
+          "teoria-helper-modal-description-en",
+          !englishCheatSheets.hidden ? "teoria-helper-modal-cheat-sheets-en" : ""
         ].filter(Boolean).join(" ")
       );
     } else {

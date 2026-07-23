@@ -141,7 +141,7 @@ No account or test credentials are required.
 - `screenshot-ticket-1280x800.png` — localized Russian ticket screenshot showing the `ОТВЕТ` button, native `?` button, question, and complete answer panels. Narrow white side margins match the website background and preserve the entire ticket vertically.
 - `small-promo-440x280.png` — required locale-neutral promotional image.
 
-The uncropped source captures are kept in `source/` and are not part of the extension ZIP. The upload ZIP is stored at `release/teoria-helper-1.0.0.zip` and committed to Git as the release artifact for version `1.0.0`.
+The uncropped source captures are kept in `source/` and are not part of the extension ZIP. The current upload ZIP is stored at `release/teoria-helper-1.1.0.zip` and committed to Git as the release artifact for version `1.1.0`.
 
 ### Extension icon
 
@@ -172,7 +172,7 @@ The uncropped source captures are kept in `source/` and are not part of the exte
 ## Manual release checklist
 
 - [ ] `manifest.json` parses and still uses Manifest V3.
-- [ ] Version is `1.0.0` for the first release.
+- [ ] Version is `1.1.0`.
 - [ ] Manifest name and descriptions render correctly in both English and Russian Chrome locales.
 - [ ] Every icon path exists and each PNG has the declared dimensions.
 - [ ] The extension requests no unnecessary permissions.

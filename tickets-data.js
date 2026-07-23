@@ -1,3 +1,15 @@
+globalThis.TEORIA_CHEAT_SHEETS = Object.freeze({
+  "trafficControllerRightArmForward": {
+    "label": {
+      "ru": "ШПАРГАЛКА",
+      "en": "CHEAT SHEET"
+    },
+    "text": {
+      "ru": "Для безрельсовых транспортных средств при вытянутой вперёд правой руке регулировщика:\n\n🟢 С левого бока — можно ехать в любом направлении.\n🟡 Со стороны груди — можно повернуть только направо.\n🔴 С правого бока — движение запрещено.\n🔴 Со стороны спины — движение запрещено.",
+      "en": "For non-rail vehicles, when the traffic officer’s right arm is extended forward:\n\n🟢 From the officer’s left side — you may go in any direction.\n🟡 Facing the officer — you may turn right only.\n🔴 From the officer’s right side — movement is prohibited.\n🔴 From behind the officer — movement is prohibited."
+    }
+  }
+});
 globalThis.TEORIA_TICKET_DATA = Object.freeze({
   "1": {
     "answerNumber": "2",
@@ -145,9 +157,12 @@ globalThis.TEORIA_TICKET_DATA = Object.freeze({
       "ru": "Водителям трамвая и автобуса"
     },
     "explanation": {
-      "ru": "При вытянутой вперёд правой руке регулировщика со стороны его груди разрешён только поворот направо — его выполняет легковой автомобиль. Для трамвая и автобуса показанные направления закрыты.",
-      "en": "When the traffic officer’s right arm is extended forward, traffic facing the officer may turn only right, which is what the car does. The shown routes are closed to the tram and bus."
-    }
+      "ru": "Легковой автомобиль находится со стороны левого бока регулировщика, поэтому ему как безрельсовому транспортному средству разрешено двигаться в любом направлении. Трамвай находится со стороны груди регулировщика: оттуда разрешён только поворот направо, а трамвай едет прямо. Автобус находится со стороны правого бока регулировщика, откуда движение запрещено. Поэтому показанное движение запрещено водителям трамвая и автобуса.",
+      "en": "The car approaches from the traffic officer’s left side, so as a non-rail vehicle it may travel in any direction. The tram faces the officer’s chest, from which only a right turn is permitted, but the tram is going straight. The bus approaches from the officer’s right side, from which movement is prohibited. The shown movements are therefore prohibited for the tram and bus."
+    },
+    "cheatSheets": [
+      "trafficControllerRightArmForward"
+    ]
   },
   "16": {
     "answerNumber": "3",
@@ -177,7 +192,10 @@ globalThis.TEORIA_TICKET_DATA = Object.freeze({
     "explanation": {
       "ru": "Вытянутая вперёд правая рука означает «стоп» для тех, кто подъезжает со стороны правого бока и спины регулировщика. Синий автомобиль движется именно с запрещённой стороны; красный и белый едут по разрешённым направлениям.",
       "en": "A traffic officer’s right arm extended forward means stop for traffic approaching from the officer’s right side or back. The blue car approaches from a prohibited side, while the red and white cars follow permitted routes."
-    }
+    },
+    "cheatSheets": [
+      "trafficControllerRightArmForward"
+    ]
   },
   "19": {
     "answerNumber": "3",
@@ -327,7 +345,10 @@ globalThis.TEORIA_TICKET_DATA = Object.freeze({
     "explanation": {
       "ru": "При вытянутой вперёд правой руке со стороны груди регулировщика можно двигаться только направо. Легковой автомобиль едет в запрещённом направлении; движения мотоцикла и автобуса сигналу не противоречат.",
       "en": "When the traffic officer’s right arm is extended forward, traffic facing the officer may move only to the right. The car follows a prohibited direction, while the motorcycle and bus comply with the signal."
-    }
+    },
+    "cheatSheets": [
+      "trafficControllerRightArmForward"
+    ]
   },
   "34": {
     "answerNumber": "4",
@@ -347,7 +368,10 @@ globalThis.TEORIA_TICKET_DATA = Object.freeze({
     "explanation": {
       "ru": "Синие маячки и сирена не разрешают скорой игнорировать сигнал регулировщика. В показанной ситуации сигнал разрешает движение грузовику и красному автомобилю, а скорой и синему автомобилю — запрещает.",
       "en": "Blue lights and a siren do not allow the ambulance to ignore a traffic officer’s signal. Here the signal permits the truck and red car to move, but stops the ambulance and blue car."
-    }
+    },
+    "cheatSheets": [
+      "trafficControllerRightArmForward"
+    ]
   },
   "36": {
     "answerNumber": "3",
@@ -377,7 +401,10 @@ globalThis.TEORIA_TICKET_DATA = Object.freeze({
     "explanation": {
       "ru": "При вытянутой вперёд правой руке регулировщика безрельсовому транспорту со стороны его левого бока разрешено ехать в любом направлении. Поэтому легковой автомобиль может выбрать любую из траекторий A, B, C или D.",
       "en": "When the traffic officer’s right arm is extended forward, non-rail vehicles approaching from the officer’s left side may travel in any direction. The car may therefore follow any of routes A, B, C, or D."
-    }
+    },
+    "cheatSheets": [
+      "trafficControllerRightArmForward"
+    ]
   },
   "39": {
     "answerNumber": "2",
@@ -387,7 +414,10 @@ globalThis.TEORIA_TICKET_DATA = Object.freeze({
     "explanation": {
       "ru": "Положение регулировщика разрешает показанные направления жёлтому и синему автомобилям. Грузовой и красный автомобили подходят со сторон или движутся в направлениях, для которых этот жест означает «стоп».",
       "en": "The traffic officer’s position permits the shown movements by the yellow and blue cars. The truck and red car approach from sides or follow directions for which this gesture means stop."
-    }
+    },
+    "cheatSheets": [
+      "trafficControllerRightArmForward"
+    ]
   },
   "40": {
     "answerNumber": "3",
@@ -447,7 +477,10 @@ globalThis.TEORIA_TICKET_DATA = Object.freeze({
     "explanation": {
       "ru": "Жест регулировщика разрешает обоим трамваям двигаться по показанным направлениям. Направление легкового автомобиля этому сигналу не соответствует, поэтому без нарушения проедут только два трамвая.",
       "en": "The traffic officer’s gesture permits both trams to follow the shown routes. The car’s route does not comply with the signal, so only the two trams may proceed without breaking the rules."
-    }
+    },
+    "cheatSheets": [
+      "trafficControllerRightArmForward"
+    ]
   },
   "46": {
     "answerNumber": "3",
@@ -737,7 +770,10 @@ globalThis.TEORIA_TICKET_DATA = Object.freeze({
     "explanation": {
       "ru": "Вытянутая вперёд правая рука регулировщика разрешает разные направления движения в зависимости от того, с какой стороны находится водитель. В показанном положении продолжить движение по стрелке может только жёлтый автомобиль, а трамвай должен остановиться.",
       "en": "An officer's right arm extended forward permits different movements depending on which side of the officer the driver faces. In the positions shown, only the yellow car may follow its arrow, while the tram must stop."
-    }
+    },
+    "cheatSheets": [
+      "trafficControllerRightArmForward"
+    ]
   },
   "75": {
     "answerNumber": "2",
@@ -1195,8 +1231,8 @@ globalThis.TEORIA_TICKET_DATA = Object.freeze({
       "ru": "В отношении ни одного из водителей транспортного средства"
     },
     "explanation": {
-      "ru": "Зелёный автомобиль движется по дороге с приоритетом, а правила выполнения манёвра оставляют преимущество за ним перед чёрным автомобилем. Грузовик находится на второстепенной дороге, поэтому зелёному не нужно уступать ни одному из них.",
-      "en": "The green car is travelling on the priority road, and the manoeuvring rules leave it with priority over the black car. The truck is on the secondary road, so the green car does not need to yield to either vehicle."
+      "ru": "Зелёный автомобиль и грузовик находятся на главной дороге. Чёрный автомобиль подъезжает по второстепенной дороге и обязан уступить зелёному. Грузовик поворачивает налево и обязан уступить встречному зелёному автомобилю, который едет прямо. Поэтому водитель зелёного автомобиля не уступает никому.",
+      "en": "The green car and the truck are on the main road. The black car approaches from the secondary road and must yield to the green car. The truck is turning left and must yield to the oncoming green car travelling straight. Therefore, the green-car driver does not yield to either vehicle."
     }
   },
   "121": {
@@ -1365,8 +1401,8 @@ globalThis.TEORIA_TICKET_DATA = Object.freeze({
       "ru": "Как в отношении водителя мотоцикла, так же в отношении водителя трамвая"
     },
     "explanation": {
-      "ru": "Белый автомобиль выезжает с прилегающей территории и обязан пропустить мотоцикл, который уже движется по дороге. При повороте налево вне перекрёстка он также пересекает путь попутного трамвая и должен пропустить его.",
-      "en": "The white car is leaving an adjacent area and must yield to the motorcycle already on the road. When turning left outside an intersection, it also crosses the path of a tram travelling in the same direction and must yield to it."
+      "ru": "Белый автомобиль движется по дороге рядом с трамваем и поворачивает налево вне перекрёстка. При таком манёвре он обязан уступить встречному мотоциклу и трамваю, который движется с ним в попутном направлении. Поэтому белый автомобиль должен пропустить обоих.",
+      "en": "The white car is travelling on the road beside the tram and is turning left outside an intersection. During this manoeuvre, it must yield to the oncoming motorcycle and to the tram travelling in the same direction. The white car must therefore yield to both."
     }
   },
   "138": {
@@ -1387,7 +1423,10 @@ globalThis.TEORIA_TICKET_DATA = Object.freeze({
     "explanation": {
       "ru": "Сигнал регулировщика разрешает движение обоим автомобилям, но сам по себе не определяет очерёдность между пересекающимися траекториями. Дальше действуют правила нерегулируемого перекрёстка и знаки приоритета, по которым первым проходит грузовик.",
       "en": "The traffic officer’s signal permits both vehicles to move but does not itself set the order between their crossing routes. The uncontrolled-intersection rules and priority signs then apply, giving the truck priority."
-    }
+    },
+    "cheatSheets": [
+      "trafficControllerRightArmForward"
+    ]
   },
   "140": {
     "answerNumber": "1",
@@ -1397,7 +1436,10 @@ globalThis.TEORIA_TICKET_DATA = Object.freeze({
     "explanation": {
       "ru": "При вытянутой вперёд правой руке регулировщика разрешённые направления зависят от стороны, с которой подъезжает водитель. Положение и направление белого автомобиля разрешены, а красному этот жест предписывает остановиться.",
       "en": "When the traffic officer’s right arm is extended forward, the permitted movements depend on the side from which a driver approaches. The white car’s position and direction are permitted, while the red car must stop."
-    }
+    },
+    "cheatSheets": [
+      "trafficControllerRightArmForward"
+    ]
   },
   "141": {
     "answerNumber": "2",
@@ -1415,8 +1457,8 @@ globalThis.TEORIA_TICKET_DATA = Object.freeze({
       "ru": "В направление В"
     },
     "explanation": {
-      "ru": "Зелёная стрелка реверсивного светофора разрешает движение по полосе, над которой она горит, а красный крест запрещает въезд на другую полосу. Поэтому легковой автомобиль может продолжить только по траектории B.",
-      "en": "A green arrow on a reversible-lane signal permits travel in the lane below it, while a red X closes the other lane. The car may therefore continue only along route B."
+      "ru": "Реверсивный светофор выключен: на нём не горит ни один сигнал. Полоса направления А с обеих сторон обозначена разметкой 1.9, поэтому при выключенном реверсивном светофоре въезжать на неё запрещено. Направление В остаётся вне этой реверсивной полосы, поэтому разрешено только движение по направлению В.",
+      "en": "The reversible-lane signal is off: none of its signals are illuminated. The lane for route A is bounded on both sides by marking 1.9, so entering it is prohibited while the reversible signal is off. Route B remains outside that reversible lane, so only route B is permitted."
     }
   },
   "143": {
@@ -1665,8 +1707,8 @@ globalThis.TEORIA_TICKET_DATA = Object.freeze({
       "ru": "Имеет право"
     },
     "explanation": {
-      "ru": "Стрелка на разрешающем сигнале светофора действует только в указанном ею направлении. Показанный манёвр совпадает с разрешённым направлением, поэтому ехать можно.",
-      "en": "An arrow on a permissive traffic signal applies only to the direction it indicates. The shown manoeuvre follows that permitted direction, so the car may proceed."
+      "ru": "На светофоре горит обычный круглый зелёный сигнал без стрелки. Такой сигнал разрешает движение во всех направлениях, если конкретный манёвр не запрещён дорожными знаками или разметкой. Показанный поворот направо не запрещён, поэтому водитель имеет право продолжить движение по стрелке.",
+      "en": "The traffic light shows an ordinary circular green signal without an arrow. This signal permits movement in any direction unless a particular manoeuvre is prohibited by road signs or markings. The shown right turn is not prohibited, so the driver may proceed along the indicated path."
     }
   },
   "168": {
@@ -1927,7 +1969,10 @@ globalThis.TEORIA_TICKET_DATA = Object.freeze({
     "explanation": {
       "ru": "При вытянутой вперёд правой руке регулировщика транспорт со стороны его груди может двигаться только направо. Однако для поворота нужно заранее занять соответствующее крайнее положение, чего водитель в этой ситуации не сделал.",
       "en": "When the officer's right arm is extended forward, traffic approaching from the officer's chest may move only to the right. A driver must also take the correct outer position before turning, which was not done here."
-    }
+    },
+    "cheatSheets": [
+      "trafficControllerRightArmForward"
+    ]
   },
   "194": {
     "answerNumber": "3",
@@ -1937,7 +1982,10 @@ globalThis.TEORIA_TICKET_DATA = Object.freeze({
     "explanation": {
       "ru": "Со стороны левого бока регулировщика с вытянутой вперёд правой рукой безрельсовому транспорту разрешены все направления. Но положение белого автомобиля на проезжей части позволяет ему в этой ситуации ехать только прямо или направо.",
       "en": "From the officer's left side when the right arm is extended forward, non-rail vehicles may move in any direction. However, the white car's position on the road limits it here to going straight or turning right."
-    }
+    },
+    "cheatSheets": [
+      "trafficControllerRightArmForward"
+    ]
   },
   "195": {
     "answerNumber": "3",
@@ -1947,7 +1995,10 @@ globalThis.TEORIA_TICKET_DATA = Object.freeze({
     "explanation": {
       "ru": "Со стороны левого бока регулировщика с вытянутой вперёд правой рукой безрельсовому транспорту разрешено движение в любом направлении. Поэтому автомобиль может выбрать любую из показанных траекторий.",
       "en": "When the officer's right arm is extended forward, non-rail traffic approaching from the officer's left side may move in any direction. The car may therefore take any of the shown routes."
-    }
+    },
+    "cheatSheets": [
+      "trafficControllerRightArmForward"
+    ]
   },
   "196": {
     "answerNumber": "3",
@@ -1957,7 +2008,10 @@ globalThis.TEORIA_TICKET_DATA = Object.freeze({
     "explanation": {
       "ru": "Жест регулировщика разрешает обоим автомобилям движение с их сторон в показанных направлениях. Поэтому право продолжить есть у обоих водителей.",
       "en": "The officer's gesture permits both cars to move from their respective approaches in the shown directions. Both drivers may therefore continue."
-    }
+    },
+    "cheatSheets": [
+      "trafficControllerRightArmForward"
+    ]
   },
   "197": {
     "answerNumber": "1",
@@ -1967,7 +2021,10 @@ globalThis.TEORIA_TICKET_DATA = Object.freeze({
     "explanation": {
       "ru": "При вытянутой вперёд правой руке регулировщика разрешённые направления зависят от стороны, с которой к нему подъезжает транспорт. В показанном положении по своей стрелке может ехать только жёлтый автомобиль, а трамвай должен остановиться.",
       "en": "When an officer extends the right arm forward, permitted movements depend on the side from which traffic approaches. In the positions shown, only the yellow car may follow its arrow, while the tram must stop."
-    }
+    },
+    "cheatSheets": [
+      "trafficControllerRightArmForward"
+    ]
   },
   "198": {
     "answerNumber": "2",
@@ -1977,7 +2034,10 @@ globalThis.TEORIA_TICKET_DATA = Object.freeze({
     "explanation": {
       "ru": "При вытянутой вперёд правой руке регулировщика безрельсовый транспорт с его левой стороны может двигаться в любом направлении, а трамвай — только налево. Показанная траектория трамвая не разрешена, а мотоцикла и автомобиля — разрешена.",
       "en": "When the officer's right arm is extended forward, non-rail traffic from the officer's left may move in any direction, while a tram may only turn left. The tram's shown route is not permitted, but the motorcycle's and car's routes are."
-    }
+    },
+    "cheatSheets": [
+      "trafficControllerRightArmForward"
+    ]
   },
   "199": {
     "answerNumber": "2",
@@ -1987,7 +2047,10 @@ globalThis.TEORIA_TICKET_DATA = Object.freeze({
     "explanation": {
       "ru": "Сигнал регулировщика разрешает движение грузовику и красному автомобилю. Синяя мигалка и сирена позволяют оперативной машине отступать от многих правил, но не дают права игнорировать сигнал регулировщика.",
       "en": "The officer's signal permits the truck and the red car to move. Blue warning lights and a siren let an emergency vehicle depart from many rules, but they do not allow it to disregard a traffic officer's signal."
-    }
+    },
+    "cheatSheets": [
+      "trafficControllerRightArmForward"
+    ]
   },
   "200": {
     "answerNumber": "4",
@@ -2027,7 +2090,10 @@ globalThis.TEORIA_TICKET_DATA = Object.freeze({
     "explanation": {
       "ru": "Сигнал регулировщика разрешает обе пересекающиеся траектории, поэтому дальше действует обычное правило приоритета для такого пересечения. Безрельсовый автомобиль должен уступить трамваю.",
       "en": "The officer's signal permits both crossing paths, so the normal priority rule for this situation still applies. The non-rail vehicle must give way to the tram."
-    }
+    },
+    "cheatSheets": [
+      "trafficControllerRightArmForward"
+    ]
   },
   "204": {
     "answerNumber": "3",
@@ -2087,7 +2153,10 @@ globalThis.TEORIA_TICKET_DATA = Object.freeze({
     "explanation": {
       "ru": "Вытянутая вперёд правая рука регулировщика означает остановку для транспорта со стороны его спины и правого бока, а с других сторон разрешает только определённые направления. По показанным стрелкам продолжить движение могут автобус и мотоцикл, но не легковой автомобиль.",
       "en": "An officer's right arm extended forward stops traffic approaching from the officer's back and right side, while allowing specific movements from the other sides. Along the arrows shown, the bus and motorcycle may continue, but the car may not."
-    }
+    },
+    "cheatSheets": [
+      "trafficControllerRightArmForward"
+    ]
   },
   "210": {
     "answerNumber": "1",
@@ -2097,7 +2166,10 @@ globalThis.TEORIA_TICKET_DATA = Object.freeze({
     "explanation": {
       "ru": "При вытянутой вперёд правой руке регулировщика движение со стороны его спины и правого бока запрещено, а со стороны груди разрешён только поворот направо. В этой схеме требованиям жеста соответствует только движение легкового автомобиля.",
       "en": "With the officer's right arm extended forward, traffic from the back and right side must stop, while traffic facing the officer may turn only right. In this layout, only the car's movement complies with the signal."
-    }
+    },
+    "cheatSheets": [
+      "trafficControllerRightArmForward"
+    ]
   },
   "211": {
     "answerNumber": "3",
@@ -2107,7 +2179,10 @@ globalThis.TEORIA_TICKET_DATA = Object.freeze({
     "explanation": {
       "ru": "Со стороны левого бока регулировщика с вытянутой вперёд правой рукой безрельсовому транспортному средству разрешено движение в любом направлении. Легковой автомобиль находится именно с этой стороны, поэтому может ехать по направлениям A, B, C и D.",
       "en": "A road vehicle approaching the officer's left side while the right arm is extended forward may move in any direction. The car is on that side, so it may follow directions A, B, C, or D."
-    }
+    },
+    "cheatSheets": [
+      "trafficControllerRightArmForward"
+    ]
   },
   "212": {
     "answerNumber": "1",
@@ -2245,8 +2320,8 @@ globalThis.TEORIA_TICKET_DATA = Object.freeze({
       "ru": "Только водители грузового автомобиля и белого микроавтобуса"
     },
     "explanation": {
-      "ru": "Для грузового автомобиля и показанного микроавтобуса предел на такой дороге ниже 100 км/ч, тогда как легковой автомобиль категории B может ехать с этой скоростью. Поэтому нарушают грузовик и белый микроавтобус.",
-      "en": "The truck and the shown minibus have limits below 100 km/h on this road, while the category B passenger car may travel at that speed. The truck and white minibus therefore violate the limit."
+      "ru": "На автомагистрали грузовой автомобиль категории C или CE может двигаться не быстрее 80 км/ч. Белый микроавтобус относится к категории D1 либо D1E — в зависимости от параметров прицепа, — но для обеих категорий максимальная скорость на любой дороге составляет 80 км/ч. Поэтому наличие прицепа не меняет вывод: при скорости 100 км/ч нарушают и грузовик, и белый микроавтобус. Зелёному легковому автомобилю категории B без прицепа на автомагистрали разрешено до 110 км/ч, поэтому он правила не нарушает.",
+      "en": "On a motorway, a category C or CE truck is limited to 80 km/h. The white minibus is category D1 or D1E depending on the trailer’s specifications, but both categories are limited to 80 km/h on every road. The trailer therefore does not change the result: at 100 km/h, both the truck and the white minibus are in violation. The green category B passenger car without a trailer may travel at up to 110 km/h on a motorway, so it is not in violation."
     }
   },
   "226": {
@@ -4765,7 +4840,10 @@ globalThis.TEORIA_TICKET_DATA = Object.freeze({
     "explanation": {
       "ru": "Регулировщик стоит к трамваю грудью и вытянул правую руку вперёд. Со стороны груди этот жест разрешает всем транспортным средствам двигаться только направо, поэтому налево трамваю нельзя.",
       "en": "The traffic officer faces the tram with the right arm extended forward. Traffic approaching the officer's chest may move only to the right, so the tram cannot turn left."
-    }
+    },
+    "cheatSheets": [
+      "trafficControllerRightArmForward"
+    ]
   },
   "475": {
     "answerNumber": "2",
@@ -12903,7 +12981,10 @@ globalThis.TEORIA_TICKET_DATA = Object.freeze({
     "explanation": {
       "ru": "Со стороны левого бока регулировщика его вытянутая вперёд правая рука разрешает безрельсовому транспорту ехать во всех направлениях. Однако действующий дорожный знак исключает направление C, поэтому остаются A, B и D.",
       "en": "For non-rail traffic approaching from the officer's left side, a right arm extended forward permits movement in every direction. However, the applicable road sign excludes direction C, leaving A, B, and D."
-    }
+    },
+    "cheatSheets": [
+      "trafficControllerRightArmForward"
+    ]
   },
   "1282": {
     "answerNumber": "3",

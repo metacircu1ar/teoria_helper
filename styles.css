@@ -244,6 +244,38 @@ html.teoria-helper-modal-open {
   line-height: 1.55;
 }
 
+.teoria-helper-modal__cheat-sheet {
+  margin-top: 14px;
+  padding: 13px 14px;
+  color: #26352b;
+  background: #fff;
+  border: 1px solid #cbdccf;
+  border-left: 4px solid #14823b;
+  border-radius: 7px;
+}
+
+.teoria-helper-modal__explanation-block--en .teoria-helper-modal__cheat-sheet {
+  border-color: #cad9e7;
+  border-left-color: #306ea3;
+}
+
+.teoria-helper-modal__cheat-sheet-label {
+  color: #0b6b2d;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+}
+
+.teoria-helper-modal__explanation-block--en .teoria-helper-modal__cheat-sheet-label {
+  color: #245d8d;
+}
+
+.teoria-helper-modal__cheat-sheet-text {
+  margin: 7px 0 0;
+  font-size: 15px;
+  line-height: 1.55;
+  white-space: pre-line;
+}
+
 .teoria-helper-modal__unavailable {
   background: #f7f7f7;
   border: 1px solid #d9dcda;
